@@ -4,10 +4,12 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "charliermarsh.ruff",
+        "ms-python.black-formatter",
         "ms-toolsai.jupyter",
         "ms-toolsai.jupyter-keymap",
         "ms-toolsai.jupyter-renderers",
-        "ms-toolsai.jupyter-cell-tags"
+        "ms-toolsai.jupyter-cell-tags",
+        "eamodio.gitlens"
     ],
     "unwantedRecommendations": [
         "tecosaur.latex-utilities"

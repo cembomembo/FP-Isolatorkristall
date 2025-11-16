@@ -2,6 +2,7 @@
   // ===============================
   // 🐍 Python configuration
   // ===============================
+  // Works on Windows (Scripts) and Linux/Mac (bin)
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
   "python.terminal.activateEnvironment": true,
   "python.analysis.autoImportCompletions": true,
@@ -18,6 +19,8 @@
   // ===============================
   "editor.formatOnSave": true,
   "editor.parameterHints.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "same",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
@@ -25,29 +28,23 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
-  "[latex]": {
-    "editor.wordWrap": "on",
-    "editor.wrappingIndent": "same"
-  },
   // ===============================
   // 📄 LaTeX Workshop
   // ===============================
   "latex-workshop.latex.outDir": "build",
   "latex-workshop.view.pdf.viewer": "tab",
-  // PDF Sync
   "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
   "latex-workshop.view.outline.sync.viewer": true,
-  // 🚫 Disable inverted PDF colors forever
   "latex-workshop.view.pdf.invertMode.enabled": "never",
   "latex-workshop.view.pdf.invert": 0,
-  // Prevent PDF from auto-scrolling to current code position
   "latex-workshop.synctex.afterBuild.enabled": false,
+  "latex-workshop.message.update.show": false,
   // ===============================
-  // 🔧 Build recipes
+  // 🔨 Build recipes (latexmk + biber)
   // ===============================
   "latex-workshop.latex.recipes": [
     {
-      "name": "latexmk (latex + biber)",
+      "name": "latexmk (pdf + biber)",
       "tools": [
         "latexmk",
         "biber",
@@ -55,7 +52,7 @@
       ]
     },
     {
-      "name": "latexmk",
+      "name": "latexmk (pdf only)",
       "tools": [
         "latexmk"
       ]
@@ -82,9 +79,6 @@
       ]
     }
   ],
-  // ===============================
-  // 🔨 Compiler tools
-  // ===============================
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
@@ -162,6 +156,5 @@
   // 🚀 Miscellaneous
   // ===============================
   "workbench.startupEditor": "none",
-  "jupyter.askForKernelRestart": false,
-  "latex-workshop.message.update.show": false
+  "jupyter.askForKernelRestart": false
 }
