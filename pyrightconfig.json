@@ -1,6 +1,0 @@
-{
-  "typeCheckingMode": "standard",
-  "diagnosticSeverityOverrides": {
-    "reportUnknownMemberType": "none"
-  }
-}
