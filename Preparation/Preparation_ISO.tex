@@ -112,7 +112,7 @@ The experiment therefore provides a direct link between optical spectroscopy and
 \section{Physical Principles}
 \subsection{Crystal Structure of Corundum}
 
-Corundum (Al$_2$O$_3$) is a transparent, colorless insulating crystal in which each Al$^{3+}$ ion is surrounded by six O$^{2-}$ ions in a slightly distorted octahedral arrangement (Fig. \Ref{fig:corundum}).
+Corundum (Al$_2$O$_3$) is a transparent, colorless insulating crystal in which each Al$^{3+}$ ion is surrounded by six O$^{2-}$ ions in a slightly distorted octahedral arrangement (Fig. \Ref{fig:corundum}) \cite{ISOAnleitung}.
 The negatively charged oxygen ions create an electrostatic field around every cation site.
 In the case of Al$^{3+}$, this field has almost no optical consequence, since aluminium has no electrons in its outer \(d\)-shell and therefore no low-energy electronic states that could be shifted or excited by the surrounding oxygen ions.
 The Al$^{3+}$ sites behave essentially like stable point charges that hold the lattice together without interacting with visible light.
@@ -131,6 +131,8 @@ For this reason pure corundum is colorless. The situation changes, however, when
 
 When an Al$^{3+}$ ion in corundum is replaced by a Cr$^{3+}$ ion, the overall charge of the crystal remains unchanged because both ions carry the same charge.
 The important difference is that Cr$^{3+}$ has three electrons in its outer $3d$ shell, whereas Al$^{3+}$ has none.
+In noble-gas notation this corresponds to Al$^{3+}$: [Ne] and Cr$^{3+}$: [Ar] 3$d^{3}$.
+
 These $d$-electrons occupy orbitals with characteristic spatial shapes, and for this reason they are sensitive to the arrangement of neighbouring ions.
 When a Cr$^{3+}$ ion sits in the octahedral environment of six O$^{2-}$ ligands, the electrostatic influence of these surrounding oxygen ions affects the energies of its $d$-orbitals.
 This makes the electronic structure of Cr$^{3+}$ very different from that of Al$^{3+}$ and is the reason why chromium impurities can interact with visible light while pure corundum remains colourless.
@@ -144,7 +146,7 @@ Inside the octahedral environment of six O$^{2-}$ ions in corundum the situation
 \vspace{1em}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{../resources/figures/dOrbitals.png}
+    \includegraphics[width=1.0\textwidth]{../resources/figures/dOrbitals.png}
     \caption{Directional shapes of the five $d$-orbitals shown relative to the coordinate axes and ligand directions in an octahedral environment. Orbitals that point along the axes experience stronger repulsion from approaching ligands than those pointing between the axes \cite{libretexts_d_orbitals}.}
     \label{fig:d_orbitals}
 \end{figure}
@@ -154,13 +156,60 @@ The remaining two orbitals ($d_{z^{2}}$ and $d_{x^{2}-y^{2}}$) point more direct
 As a result the originally degenerate $d$-orbitals split into a lower-energy group of three and a higher-energy group of two.
 
 For a Cr$^{3+}$ ion with three $d$-electrons this splitting means that all three electrons occupy the lower-energy orbitals, following Hund’s rule.
-Light can be absorbed when one of these electrons is promoted from a lower orbital to one of the higher-energy orbitals.
-The energy needed for such an excitation corresponds to specific colours of visible light, which is why chromium impurities in corundum produce distinct absorption bands and give ruby its characteristic colour.
+This arrangement defines the ground state of the Cr$^{3+}$ ion and provides the starting point for optical excitations discussed in the next subsection.
 
 
-\subsection{xxx}
+\subsection{Optical Transitions and Absorption Bands}
 
-xxx
+The splitting of the Cr$^{3+}$ $d$-orbitals into a lower group of three and a higher group of two creates a set of energy levels that an electron can move between.
+When light of the right colour shines on the crystal, one of the electrons in the lower-energy orbitals can absorb a photon and jump into one of the higher-energy orbitals.
+The light that provides exactly the required energy for such an excitation is removed from the transmitted beam, so the crystal absorbs specific colours of visible light.
+
+In a real crystal the surrounding ions are not perfectly fixed but vibrate, and the distances between the Cr$^{3+}$ ion and the ligands are slightly distorted.
+These effects mean that the exact energy required for the excitation is not the same in every chromium site.
+As a result the absorption does not occur at one sharp wavelength but is spread out over a broader range, forming the characteristic absorption bands observed in ruby.
+
+For Cr$^{3+}$ in corundum two such broad bands appear in the visible range, and their positions determine which colours of light are absorbed most strongly.
+Since much of the green and blue light is absorbed while red light is not, ruby appears red both in transmission and in reflected light.
+These absorption bands form the central features of the spectrum measured in the experiment and allow the energy splitting between the $d$-orbitals to be determined.
+
+
+\subsection{Tanabe-Sugano Diagram}
+
+The Tanabe-Sugano diagram for a $d^{3}$ ion, seen in Fig. \Ref{fig:tanabe_sugano}, shows how the energies of the electronic states split and shift as a function of the crystal-field strength, expressed through the ratio $Dq/B$.
+The vertical axis gives the energies of the excited states in units of the Racah parameter $B$, while the horizontal axis represents the relative crystal-field strength.
+This diagram allows the energies of the optical transitions to be related directly to the crystal-field parameter $Dq$.
+To compare measured wavelengths with the diagram, the photon energies of the transitions are obtained from
+
+\[
+E = \frac{hc}{\lambda},
+\]
+
+or in spectroscopic units from the wavenumber definition
+
+\[
+\tilde{\nu} = \frac{1}{\lambda}.
+\]
+
+For a $d^{3}$ ion in an octahedral environment the free-ion ground term ${}^{4}F$ splits into the states ${}^{4}A_{2}$, ${}^{4}T_{2}$, and ${}^{4}T_{1}$ (in order of increasing energy).
+In ruby the ground state is ${}^{4}A_{2}$, and the two broad absorption bands observed in the visible region correspond to electronic excitations into the ${}^{4}T_{2}$ and ${}^{4}T_{1}$ states.
+These are commonly referred to as the Y band (${^{4}A_{2}}\rightarrow {^{4}T_{2}}$) and the U band (${^{4}A_{2}}\rightarrow {^{4}T_{1}}$).
+
+\vspace{1em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../resources/figures/TanabeSugano.png}
+    \caption{Tanabe--Sugano diagram for a $d^{3}$ ion showing the dependence of the electronic term energies on the crystal-field strength $Dq/B$ \cite{ISOAnleitung}.}
+    \label{fig:tanabe_sugano}
+\end{figure}
+
+By measuring the central wavelengths of the U and Y absorption bands and converting them into transition energies or wavenumbers, the corresponding positions can be located on the Tanabe--Sugano diagram.
+Using the given Racah parameter $B = 765\,\mathrm{cm^{-1}}$, the ratio $Dq/B$ can be read off from the intersections, and from this the crystal-field splitting
+\[
+\Delta = 10Dq
+\]
+of the Cr$^{3+}$ ion in corundum can be determined.
+This procedure provides a direct connection between the measured absorption spectrum and the underlying electronic structure of the chromium impurity.
 
 
 
