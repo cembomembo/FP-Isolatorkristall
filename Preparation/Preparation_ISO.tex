@@ -212,13 +212,27 @@ Using the given Racah parameter $B = 765\,\mathrm{cm^{-1}}$, the ratio $Dq/B$ ca
 of the Cr$^{3+}$ ion in corundum can be determined.
 This procedure provides a direct connection between the measured absorption spectrum and the underlying electronic structure of the chromium impurity.
 
-
-
 % --- Experimental Setup ---
 \section{Experimental Setup}
-\subsection{xxx}
+\subsection{Two-Beam Absorption Spectrometer}
+In order to record the optical absorption spectrum of a ruby crystal a two-beam absorption spectrometer is employed (see Figure~\ref{fig:spectrometer}).
+Light source used correspond to a Xenon high-pressure lamp. Its beam passes an iris diaphragm and then is divided is divided 
+into two parallel beams using a beam splitter. One beam interacts with the ruby sample, while the second beam propagates
+through an aperture as a reference. The beams are then again recombined using a set of lenses and mirrors.
 
-some notes of what should be included in this section
+The recombined beam then interacts with a monochromator, which selects a single wavelength at a time. The monochromator (symbol \textit{M} on the figure) is driven by an electric motor that scans the wavelength continuously across the region of $350-720$nm.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../resources/figures/spectrometer.png}
+    \caption{Sketch of the spectrometer setup.}
+    \label{fig:spectrometer}
+\end{figure}
+
+A mechanical chopper (symbol \textit{C} on the figure) placed in the two-beam section of the setup periodically and alternatively blocks both beams, so that the intensity at the photomultiplier (symbol \textit{PM} on the figure) alternates between the probe and reference signals at the chopping frequency. 
+The chopper controller provides a reference signal for the lock-in amplifier. To suppress noise and lamp intensity fluctuations, the lock-in amplifier weights the probe contribution with positive sign and the reference contribution with negative sign. Its low-pass filtered output is therefore proportional to the intensity difference $I_{\mathrm{Probe}} - I_{\mathrm{Referenz}}$.
+Finally, the analog output of the lock-in amplifier is digitized by an A/D converter and recorded by the computer as a function of the scanned monochromator wavelength.
+
 
  double beam absorption spectrometer
  - optical path and components
@@ -243,20 +257,14 @@ some notes of what should be included in this section
    - signal path and constraint
    - noise filtering
 
-\subsection{xxx}
-
-xxx
-
-
-
 % --- Procedure ---
 \section{Procedure}
-\subsection{xxx}
+\subsection{Calibration}
 
 xxx
 
 
-\subsection{xxx}
+\subsection{Measurement}
 
 xxx
 
