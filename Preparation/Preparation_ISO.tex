@@ -234,39 +234,43 @@ The chopper controller provides a reference signal for the lock-in amplifier. To
 Finally, the analog output of the lock-in amplifier is digitized by an A/D converter and recorded by the computer as a function of the scanned monochromator wavelength.
 
 
- double beam absorption spectrometer
- - optical path and components
-   - light source
-   - beam splitting
-   - intensity equalization
-   - modulation
-   - spectral dispersion
- - lock-in detection and signal extraction
-   - noise rejection Principles
-   - lock-in amplifier (understood)
-   - differential Measurement
-   - output signal 
-   - input safety 
- - data aquisition
-   - interfaces
-   - data reading
-   - software and storage
- - wavelength calibration setup
-   - without chopper or lock-in amplifier
-   - calibration source: mercury lamp
-   - signal path and constraint
-   - noise filtering
+% double beam absorption spectrometer
+% - optical path and components
+%   - light source
+%   - beam splitting
+%   - intensity equalization
+%   - modulation
+%   - spectral dispersion
+% - lock-in detection and signal extraction
+%   - noise rejection Principles
+%   - lock-in amplifier (understood)
+%   - differential Measurement
+%   - output signal 
+%   - input safety 
+% - data aquisition
+%   - interfaces
+%   - data reading
+%   - software and storage
+% - wavelength calibration setup
+%   - without chopper or lock-in amplifier
+%   - calibration source: mercury lamp
+%   - signal path and constraint
+%   - noise filtering
 
 % --- Procedure ---
 \section{Procedure}
-\subsection{Calibration}
-
-xxx
-
+\subsection{Preperation and Calibration}
+First the Two-beam absorption spectrometer has to be set up as described in the experimental setup section. For this the Xenon high pressure lamp is turned on, it runs for the whole experiment as it takes about an our to turn before it can be turned on again. Also UV protection goggles are worn because of the high UV part of the lamp.
+Then the rest of the setup as described above is set up.\\
+Then the intensity of the beams is adjusted at the iris diaphragms LB and LB/Ru to be the same. For this the monochromator is set to 700 nm wavelength, because the absorption of the ruby is negligible at this wavelength.\\
+Then the lock-in amplifier is prepared, also as described in the setup section. Then the communication between the lock-in amplifier and the computer is checked in the terminal emulator Tera Term with the command "q".
 
 \subsection{Measurement}
 
-xxx
+For the measurement it is important that the monochromator is only moved by an electric motor. It measures the spectrum in the 350 nm to  720 nm range.\\
+First the difference in intensity between the two beams is measured and then their individual intensity. After that the same is done with a 5-10 times higher sensitivity in the 670-720 nm range.\\
+Then the baseline is measured by replacing the ruby with a pinhole diaphragm which allows to identification of a deviation of the absorption line, this is done with the monochromator at 700nm and the initial sensitivity.\\
+Lastly the spectrum of a low-pressure quicksilver lamp is measured, as it has a very reproducible spectrum, allowing for wavelength calibration of the monochromator. For this the lamp is put directly in front of the monochromator without chopper or lock-in amplifier. This measurement serves as a reference, for the previous measurements.
 
 
 
