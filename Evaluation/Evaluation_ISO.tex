@@ -110,13 +110,15 @@ The experiment therefore provides a direct link between optical spectroscopy and
 
 % --- Physical Principles ---
 \section{Physical Principles}
-\subsection{Crystal Structure of Corundum}
+\subsection{Properties of Pure Corundum}
 
-Corundum (Al$_2$O$_3$) is a transparent, colorless insulating crystal in which each Al$^{3+}$ ion is surrounded by six O$^{2-}$ ions in a slightly distorted octahedral arrangement (Fig. \Ref{fig:corundum}) \cite{ISOAnleitung}.
-The negatively charged oxygen ions create an electrostatic field around every cation site.
-In the case of Al$^{3+}$, this field has almost no optical consequence, since aluminium has no electrons in its outer \(d\)-shell and therefore no low-energy electronic states that could be shifted or excited by the surrounding oxygen ions.
-The Al$^{3+}$ sites behave essentially like stable point charges that hold the lattice together without interacting with visible light.
-For this reason pure corundum is colorless. The situation changes, however, when an Al$^{3+}$ ion is replaced by another ion that does carry \(d\)-electrons, creating a substitutional point defect and introducing new electronic states into this same electrostatic environment.
+Corundum is the host crystal in which the optical properties of ruby originate.
+Before discussing chromium impurities it is useful to understand both the geometric arrangement of ions and the electronic structure of the pure material.
+These two aspects together explain why undoped Al$_2$O$_3$ is transparent and colourless, and they form the basis for understanding how Cr$^{3+}$ impurities modify its optical properties.
+
+\subsubsection{Crystal Structure}
+
+As shown in Figure~\ref{fig:corundum}, corundum consists of Al$^{3+}$ cations and O$^{2-}$ anions arranged in a slightly distorted octahedral coordination \cite{ISOAnleitung}.
 
 \vspace{1em}
 \begin{figure}[H]
@@ -126,12 +128,43 @@ For this reason pure corundum is colorless. The situation changes, however, when
     \label{fig:corundum}
 \end{figure}
 
+Each aluminum ion is surrounded by six oxygen ions, and these oxygen ligands generate a static electrostatic field at every cation site.
+Because Al$^{3+}$ has the electron configuration [Ne], its outer shells are completely filled and it has no $d$-electrons available for optical excitations in the visible range.
+As a result the Al$^{3+}$ sites act essentially as stable point charges that contribute to the mechanical stability of the lattice without interacting with visible light.
+
+\subsubsection{Electronic Structure and Band Gap}
+
+The transparency of pure corundum is a consequence of its electronic band structure.
+In a crystalline solid the atomic orbitals combine to form energy bands, and the electrons occupy the lowest available bands up to the valence band.
+Above the valence band lies the conduction band, and the energy separation between the two is called the band gap.
+This band structure is illustrated in Figure~\ref{fig:bandtheory}.
+
+In Al$_2$O$_3$ this band gap is very large, typically several electronvolts.
+The Fermi level lies well inside this gap, which means that the valence band is completely filled and the conduction band is completely empty.
+Electrons in the valence band therefore cannot be thermally excited into the conduction band, and the crystal contains no mobile charge carriers.
+This is why corundum behaves as an electrical insulator.
+
+Because the band gap is much larger than the photon energies of visible light, no direct electronic transitions between valence band and conduction band can be induced in the visible range.
+Pure corundum therefore does not absorb visible wavelengths and appears colourless.
+
+\vspace{1em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{../resources/figures/BandTheory.png}
+    \caption{Comparison of the electronic band structures of a conductor (metal), a semiconductor, and an insulator.
+    The large band gap in the insulator case explains why pure Al$_2$O$_3$ does not absorb visible light \cite{wikipedia_bandtheory}.}
+    \label{fig:bandtheory}
+\end{figure}
+
+These structural and electronic properties describe the behaviour of undoped corundum.
+In the next subsection we introduce Cr$^{3+}$ ions as substitutional point defects.
+Their partially filled $3d$-shell leads to additional electronic states inside the wide band gap of Al$_2$O$_3$, and these states give rise to the characteristic absorption features observed in ruby.
+
 
 \subsection{Substitution of Al\textsuperscript{3+} by Cr\textsuperscript{3+}}
 
 When an Al$^{3+}$ ion in corundum is replaced by a Cr$^{3+}$ ion, the overall charge of the crystal remains unchanged because both ions carry the same charge.
-The important difference is that Cr$^{3+}$ has three electrons in its outer $3d$ shell, whereas Al$^{3+}$ has none.
-In noble-gas notation this corresponds to Al$^{3+}$: [Ne] and Cr$^{3+}$: [Ar] 3$d^{3}$.
+The important difference is that Cr$^{3+}$ ([Ar] 3$d^{3}$) has three electrons in its outer $3d$ shell, whereas Al$^{3+}$ ([Ne]) has none.
 
 These $d$-electrons occupy orbitals with characteristic spatial shapes, and for this reason they are sensitive to the arrangement of neighbouring ions.
 When a Cr$^{3+}$ ion sits in the octahedral environment of six O$^{2-}$ ligands, the electrostatic influence of these surrounding oxygen ions affects the energies of its $d$-orbitals.
