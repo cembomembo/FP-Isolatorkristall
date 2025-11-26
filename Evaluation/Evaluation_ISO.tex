@@ -212,8 +212,17 @@ The states ${}^{4}T_{2}$ and ${}^{4}T_{1}$ lie higher in energy and correspond t
 
 \subsection{Optical Transitions and Absorption Bands}
 
+\subsubsection{Overview of the energy levels}
+
 The splitting of the Cr$^{3+}$ $d$-orbitals creates a set of energy levels that an electron can move between.
-When a photon has exactly the right energy, one of the $d$-electrons can be excited from the ground state into one of the two excited states.
+An overview of these states is given by the Tanabe-Sugano diagram for a $d^{3}$ ion (Fig.~\ref{fig:tanabe_sugano}).
+The solid lines represent the quartet states, which originate from the free-ion ground term ${}^{4}F$, while the dashed lines represent doublet states that arise from higher-lying free-ion terms such as ${}^{2}G$.
+Quartet states have total spin $S=\tfrac{3}{2}$ (superscript $4$), while doublet states have total spin $S=\tfrac{1}{2}$ (superscript $2$).
+Transitions between states of the same spin are strong, whereas transitions between quartet and doublet states are much weaker.
+
+\subsubsection{Broad absorption bands}
+
+When a photon has exactly the right energy, one of the $d$-electrons can be excited from the ground state into one of the two excited quartet states.
 The light at exactly this wavelength is removed from the transmitted beam, so the crystal absorbs certain parts of the spectrum more strongly than others.
 Because the ${}^{4}T_{2}$ and ${}^{4}T_{1}$ states lie at different energies, the absorption spectrum shows two separate features rather than only one.
 
@@ -222,17 +231,44 @@ These effects mean that the exact energy required for the excitation is not the 
 As a result the absorption does not occur at one sharp wavelength, but is spread out over a broader range, producing the wide absorption bands characteristic of ruby.
 
 For Cr$^{3+}$ in corundum two such broad bands appear in the visible region.
-The so called Y band (${}^{4}A_{2} \rightarrow {}^{4}T_{2}$) and U band (${}^{4}A_{2} \rightarrow {}^{4}T_{1}$).
+The so-called Y band (${}^{4}A_{2} \rightarrow {}^{4}T_{2}$) and U band (${}^{4}A_{2} \rightarrow {}^{4}T_{1}$).
 Their positions determine which parts of the spectrum are absorbed most strongly.
 Since these two bands absorb most strongly in the green and blue part of the spectrum, red light is transmitted.
 This is why ruby appears red in both transmission and reflected light.
 
-Apart from the broad bands, Cr$^{3+}$ also exhibits two very narrow and much weaker lines in the deep red part of the spectrum, close to 694\,nm.
-These lines originate from transitions into the ${}^{2}E$ state.
-They are called ``forbidden'' because such transitions do not satisfy the usual selection rules, but they can still occur with very small probability due to slight distortions of the local environment.
-The stronger of the two lines near 694\,nm is well known as the so-called R-line of ruby and is the transition used in the ruby laser %\cite{ruby_R_lines}.
-The second, even weaker line lies only a fraction of a nanometre away and appears due to a closely related fluorescence transition of the same excited state.
-Together with the broad absorption bands, these weak narrow lines complete the characteristic optical fingerprint of Cr$^{3+}$ in corundum.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{../resources/figures/TanabeSugano.png}
+    \caption{Tanabe-Sugano diagram for a $d^{3}$ ion showing the dependence of the electronic term energies on the crystal-field strength $Dq/B$.
+    At $Dq/B = 0$ the free-ion ground term ${}^{4}F$ appears as a single level, which splits into three states: the orange ${}^{4}A_{2}$ ground state, the blue ${}^{4}T_{2}$ state, and the green ${}^{4}T_{1}$ state \cite{wikipedia_tanabe_sugano_d3}.}
+    \label{fig:tanabe_sugano}
+\end{figure}
+
+\subsubsection{R-lines}
+
+In addition to the broad U and Y bands, ruby also exhibits two much narrower and significantly weaker lines in the deep red region, very close to 694\,nm.
+These lines arise from the doublet state ${}^{2}E$, which lies below the ${}^{4}T_{2}$ level.
+Although the doublet states ${}^{2}T_{1}$ and ${}^{2}T_{2}$ also exist, they lie higher in energy and do not play a role in the visible absorption of ruby, which is dominated by the quartet states ${}^{4}A_{2}$, ${}^{4}T_{2}$ and ${}^{4}T_{1}$ and the lowest doublet ${}^{2}E$.
+
+Because the ${}^{2}E$ state has a different spin than the quartet ground state, direct excitation into it is very weak.
+Transitions that change the total spin are often called ``forbidden'', because they have a much lower probability than normal spin-conserving transitions.
+However, real crystals are never perfectly symmetric, so small distortions and lattice vibrations mix the electronic states slightly.
+Direct excitation from ${}^{4}A_{2}$ into ${}^{2}E$ is therefore possible in principle, but its probability is extremely small and it does not contribute noticeably to the spectrum.
+
+In practice the ${}^{2}E$ state is populated almost exclusively indirectly.
+That means that photons first excite the ion into the ${}^{4}T_{2}$ level, from which it relaxes non-radiatively into ${}^{2}E$.
+From there they return to the ground state ${}^{4}A_{2}$ by emitting red light.
+
+The ${}^{2}E$ state itself is split slightly into two components, which is why two closely spaced emission lines are observed.
+These are the R$_1$ and R$_2$ lines near 694\,nm.
+The stronger R$_1$ line forms the basis of the ruby laser, while the weaker R$_2$ line lies only a fraction of a nanometre away~\cite{kitzmann_molecular_ruby_2022,wikipedia_ruby_pressure_scale}.
+
+Together with the broad absorption bands, these two narrow red lines form the characteristic optical spectrum of Cr$^{3+}$ in corundum.
+
+
+%%%%%%%
+
+
 
 
 \subsection{Determining splitting energy from Tanabe-Sugano Diagram}
@@ -257,14 +293,6 @@ For a $d^{3}$ ion in an octahedral environment the free-ion ground term ${}^{4}F
 In ruby the ground state is ${}^{4}A_{2}$, and the two broad absorption bands observed in the visible region correspond to electronic excitations into the ${}^{4}T_{2}$ and ${}^{4}T_{1}$ states.
 These are commonly referred to as the Y band (${^{4}A_{2}}\rightarrow {^{4}T_{2}}$) and the U band (${^{4}A_{2}}\rightarrow {^{4}T_{1}}$).
 The energy separation between these excited states and the ground state reflects how the original $d$-orbitals were divided into lower $t_{2g}$-like and higher $e_{g}$-like groups by the octahedral oxygen field.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.82\textwidth]{../resources/figures/TanabeSugano.png}
-    \caption{Tanabe-Sugano diagram for a $d^{3}$ ion showing the dependence of the electronic term energies on the crystal-field strength $Dq/B$.
-    At $Dq/B = 0$ the free-ion ground term ${}^{4}F$ appears as a single level, which splits into three states: the orange ${}^{4}A_{2}$ ground state, the blue ${}^{4}T_{2}$ state, and the green ${}^{4}T_{1}$ state \cite{wikipedia_tanabe_sugano_d3}.}
-    \label{fig:tanabe_sugano}
-\end{figure}
 
 By measuring the central wavelengths of the U and Y absorption bands and converting them into transition energies or wavenumbers, the corresponding positions can be located on the Tanabe-Sugano diagram.
 Using the given Racah parameter $B = 765\,\mathrm{cm^{-1}}$, the ratio $Dq/B$ can be read off from the intersections, and from this the crystal-field splitting energy
