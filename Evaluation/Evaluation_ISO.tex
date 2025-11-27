@@ -60,7 +60,7 @@
   \\Evaluation Report \\\\\\\\\\\\
   \textbf{Cem Boyaci} \\
   cemb93@zedat.fu-berlin.de \\\\\\
-  \textbf{Javier Bellido Roland}\\
+  \textbf{Javier Bellido Roldán}\\
   bellidoroj98@zedat.fu-berlin.de \\\\\\
   \textbf{Leon Goldammer} \\
   lg4278fu@zedat.fu-berlin.de \\\\
@@ -258,35 +258,37 @@ This radiative decay produces two very sharp emission lines around 694\,nm, ofte
 They do not show up as absorption dips in this experiment, but they belong to the same group of spin-forbidden transitions and one of them forms the basis of the well-known ruby laser~\cite{kitzmann_molecular_ruby_2022,wikipedia_ruby_pressure_scale}.
 
 
-\subsection{Determining Splitting Energy from Tanabe-Sugano Diagram}
+\subsection{Determining the Crystal-Field Parameter \texorpdfstring{$Dq$}{}}
 
-The Tanabe–Sugano diagram for a $d^{3}$ ion, seen in Fig.~\ref{fig:tanabe_sugano}, shows how the energies of the electronic states split and shift as a function of the crystal-field strength.
+The Tanabe–Sugano diagram for a $d^{3}$ ion, shown in Fig.~\ref{fig:tanabe_sugano}, plots the energies of the electronic states as a function of the crystal-field strength.
 In this diagram the term energies are expressed in spectroscopic units of $\mathrm{cm^{-1}}$, and the Racah parameter $B$ has the same units, so the vertical axis plots the dimensionless ratio $E/B$.
 The crystal-field strength $Dq$ is likewise an energy expressed in $\mathrm{cm^{-1}}$, which is why the horizontal axis shows the dimensionless ratio $Dq/B$.
-This diagram allows the energies of the optical transitions to be related directly to $Dq$, which quantifies how strongly the octahedral ligand field separates the lower and higher groups of $d$-orbitals.
+Because both axes are dimensionless, measured transition energies can be placed on the diagram without any further scaling.
 
-In ruby the ground state is ${}^{4}A_{2}$, and the two broad absorption bands observed in the visible region correspond to excitations into the ${}^{4}T_{2}$ and ${}^{4}T_{1}$ states.
-These are the Y band (${}^{4}A_{2} \rightarrow {}^{4}T_{2}$) and the U band (${}^{4}A_{2} \rightarrow {}^{4}T_{1}$), and their energies reflect the size of the crystal-field splitting.
-
-To compare measured wavelengths with the diagram, the photon energies of the transitions are obtained from
-
+In ruby the ground state is ${}^{4}A_{2}$, and the two broad absorption bands in the visible range arise from excitations into the ${}^{4}T_{2}$ and ${}^{4}T_{1}$ states.
+These are the Y band (${}^{4}A_{2}\rightarrow{}^{4}T_{2}$) and the U band (${}^{4}A_{2}\rightarrow{}^{4}T_{1}$).
+To compare the measured wavelengths with the diagram, the photon energies are obtained from
 \[
 E = \frac{hc}{\lambda},
 \]
-
-or in spectroscopic units from the wavenumber definition
-
+or, in spectroscopic units,
 \[
 \tilde{\nu} = \frac{1}{\lambda}.
 \]
 
-By measuring the central wavelengths of the U and Y absorption bands and converting them into transition energies or wavenumbers, the corresponding positions can be located on the Tanabe–Sugano diagram.
-Using the given Racah parameter $B = 765\,\mathrm{cm^{-1}}$, the ratio $Dq/B$ can be read off from the intersections, and from this the crystal-field splitting energy
+Once the central energies (or wavenumbers) of the U and Y bands are known, they can be placed on the vertical axis of the Tanabe–Sugano diagram.
+Each energy intersects its corresponding curve (either the ${}^{4}T_{2}$ or the ${}^{4}T_{1}$ line) and the intersection gives a value of $Dq/B$.
+Since the two broad bands are wide and not perfectly sharp, the two values of $Dq/B$ are usually close but not identical, so their average provides the best estimate.
+Using the Racah parameter $B = 765\,\mathrm{cm^{-1}}$, the crystal-field parameter follows simply from
 \[
-\Delta = 10Dq
+Dq = B\cdot(Dq/B).
 \]
-of the Cr$^{3+}$ ion in corundum can be determined.
-This procedure provides a direct connection between the measured absorption spectrum and the underlying electronic structure of the chromium impurity.
+After $Dq$ has been determined, it is sometimes convenient to express the strength of the octahedral field through the quantity
+\[
+\Delta = 10Dq.
+\]
+This relation comes from the simple one-electron picture, in which the five $d$-orbitals split into a lower $t_{2g}$ group and a higher $e_{g}$ group separated by $10Dq$.
+For a multi-electron ion such as Cr$^{3+}$ the actual optical transitions involve many-electron states, so they do not occur exactly at $10Dq$, but the parameter $\Delta$ remains a traditional way of expressing the overall size of the crystal-field splitting.
 
 
 
