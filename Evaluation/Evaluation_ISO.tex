@@ -294,25 +294,69 @@ For a multi-electron ion such as Cr$^{3+}$ the actual optical transitions involv
 
 % --- Experimental Setup ---
 \section{Experimental Setup}
-\subsection{Two-Beam Absorption Spectrometer}
-In order to record the optical absorption spectrum of a ruby crystal a two-beam absorption spectrometer is employed (see Figure~\ref{fig:spectrometer}).
-Light source used correspond to a Xenon high-pressure lamp. Its beam passes an iris diaphragm and then is divided is divided 
-into two parallel beams using a beam splitter. One beam interacts with the ruby sample, while the second beam propagates
-through an aperture as a reference. The beams are then again recombined using a set of lenses and mirrors.
+\subsection{Overview}
 
-The recombined beam then interacts with a monochromator, which selects a single wavelength at a time. The monochromator (symbol \textit{M} on the figure) is driven by an electric motor that scans the wavelength continuously across the region of $350-720$nm.
+To measure the transmission spectrum of the ruby sample, a two-beam absorption spectrometer is used.
+The basic idea is that the lamp light is split into two beams, where one beam passes through the ruby (probe beam) and the other bypasses it (reference beam).
+Because both beams originate from the same light source, any fluctuations of the lamp intensity affect them equally.
+By comparing the two signals, these fluctuations are  suppressed and the true absorption of the sample is isolated.
+A schematic of the setup is shown in Figure~\ref{fig:spectrometer}.
 
-\vspace{1em}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{../resources/figures/spectrometer.png}
-    \caption{Sketch of the spectrometer setup.}
+    \caption{Schematic of the two-beam absorption spectrometer used to record the transmission spectrum of the ruby crystal.}
     \label{fig:spectrometer}
 \end{figure}
 
-A mechanical chopper (symbol \textit{C} on the figure) placed in the two-beam section of the setup periodically and alternatively blocks both beams, so that the intensity at the photomultiplier (symbol \textit{PM} on the figure) alternates between the probe and reference signals at the chopping frequency. 
-The chopper controller provides a reference signal for the lock-in amplifier. To suppress noise and lamp intensity fluctuations, the lock-in amplifier weights the probe contribution with positive sign and the reference contribution with negative sign. Its low-pass filtered output is therefore proportional to the intensity difference $I_{\mathrm{Probe}} - I_{\mathrm{Referenz}}$.
-Finally, the analog output of the lock-in amplifier is digitized by an A/D converter and recorded by the computer as a function of the scanned monochromator wavelength.
+
+\subsection{Optical Layout and Beam Paths}
+
+A xenon high-pressure lamp (XHL) produces broadband light across the visible range.
+Immediately after the lamp, an iris diaphragm (IB1) limits the beam diameter and improves its spatial stability.
+The beam then encounters a beam splitter (ST), which divides it into two separate light paths.
+The upper path forms the probe beam (Strahlengang 1), while the lower path serves as the reference beam (Referenzstrahlengang).
+
+Each path contains a lens (L) that focuses the light onto the element placed in that arm.
+In the probe arm the light is focused onto a metal holder (Ru/LB) that contains the ruby and, directly below it, a fixed pinhole aperture (LB).
+By raising or lowering this holder, the beam can be directed either through the ruby or through the pinhole.
+In the reference arm the light is focused onto an identical fixed pinhole aperture (LB), but no ruby sample is present.
+
+After the sample region both beams pass through additional iris diaphragms (IB2 in the reference arm and IB3 in the probe arm) and then through a second lens (L).
+The beams are then recombined by another beam splitter (ST).
+From this point onward they follow the same optical path toward the monochromator.
+
+The monochromator (M) selects only a narrow wavelength band at a time.
+Its diffraction grating is driven by a motor that scans continuously through a chosen wavelength interval within the visible spectrum.
+The wavelength-selected beam finally reaches the photomultiplier tube (PM), whose signal is used for the measurement.
+
+
+\subsection{Chopper and Lock-In Detection}
+
+A key part of the setup is the mechanical chopper (C), which sits right before the sample region.
+The chopper continuously alternates between blocking the probe beam and blocking the reference beam.
+This means the detector receives an alternating sequence:
+\[
+\text{probe} \rightarrow \text{reference} \rightarrow \text{probe} \rightarrow \text{reference} \rightarrow \cdots
+\]
+
+This alternating signal is fed to the lock-in amplifier.
+The chopper controller provides a reference signal at the same modulation frequency, so that the lock-in is synced precisely with the opening and closing of the two beam paths.
+Using this timing information, the lock-in assigns a positive sign to the probe contribution and a negative sign to the reference contribution.
+By averaging over many modulation cycles, the lock-in amplifier outputs a voltage proportional to the intensity difference
+\[
+I_{\mathrm{Probe}} - I_{\mathrm{Reference}}.
+\]
+
+This technique is highly effective at removing noise.
+Slow drifts of the lamp, ambient light, or electrical disturbances affect both beams equally and are therefore canceled out.
+What remains is the small difference caused by the ruby absorbing certain wavelengths of the probe beam.
+
+\subsection{Data Acquisition}
+
+The output of the lock-in amplifier is digitized by an A/D converter and recorded on a computer as the monochromator scans the selected wavelength range.
+The resulting dataset contains the wavelength-dependent difference signal, from which the transmission spectrum of the ruby sample is obtained.
+This spectrum includes both the broad U and Y absorption bands and the much weaker spin-forbidden transitions in the deep red region.
 
 
 
