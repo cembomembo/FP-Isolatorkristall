@@ -425,21 +425,41 @@ In this configuration the chopper and lock-in amplifier were switched off, since
 A scan over the full range 350–720\,nm was recorded using the standard coarse-scan gear factor of 3.6 (1\,nm/s).
 The sharp emission lines of mercury were later used to calibrate the wavelength scale of all other spectra.
 
-At the beginning of each data file the start wavelength, the gear factor, and the scan direction are stored as metadata, followed by two columns containing time (in seconds) and intensity (in volts) sampled directly from the lock-in output.
-The LabVIEW display labels this quantity as ``Amplitude [mV]'' or equivalently as ``Intensität'', but the numerical values saved in the data files are stored in SI units (volts).
-
 
 
 % --- Results ---
 \section{Results}
-\subsection{xxx}
+\subsection{Wavelength Calibration of the Monochromator}
+% Task h)
+% - Use the Hg lamp spectrum to identify the known mercury emission lines.
+% - Compare measured peak positions with literature wavelengths and determine the calibration function (e.g., linear or affine correction).
+% - Apply this correction to all other spectra.
 
-xxx
+\subsection{Ruby Transmission / Absorption Spectrum (350–720 nm)}
+% Task i)
+% - Combine the relevant measured spectra (difference, probe only, reference only, baseline).
+% - Construct the actual absorption spectrum of the ruby sample.
+% - Decide on the most appropriate plotted physical quantity (transmission, absorbance, or difference intensity).
+% - Justify why this choice allows correct determination of the U and Y band energies.
 
+\subsection{Determination of Band Centers of the U and Y Absorption Bands}
+% Task j)
+% - Extract the broad U and Y bands from the absorption curve.
+% - Determine the "band center" (Schwerpunkt / centroid) of each band, not the maximum.
+% - Explain briefly how the centroid is calculated (numerical integral over wavelength or wavenumber).
 
-\subsection{xxx}
+\subsection{Determination of the Crystal-Field Parameter Dq}
+% Task k)
+% - Convert the band centers into energies or wavenumbers.
+% - Place both values on the Tanabe–Sugano diagram for d^3.
+% - Read off the corresponding Dq/B values from the intersections with the 4T2 and 4T1 curves.
+% - Compute Dq using B = 765 cm^{-1} and average the two results.
 
-xxx
+\subsection{High-Sensitivity Measurement of Forbidden Transitions}
+% Task l)
+% - Analyze the 670–720 nm high-sensitivity spectra.
+% - Identify the very weak spin-forbidden transitions or confirm their absence.
+% - Explain what physical process is being measured and why high sensitivity is required.
 
 
 
