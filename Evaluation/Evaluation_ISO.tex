@@ -118,13 +118,13 @@ These two aspects together explain why undoped Al$_2$O$_3$ is transparent and co
 
 \subsubsection{Crystal Structure}
 
-As shown in Figure~\ref{fig:corundum}, corundum consists of Al$^{3+}$ cations and O$^{2-}$ anions arranged in a slightly distorted octahedral coordination \cite{ISOAnleitung}.
+As shown in Figure~\ref{fig:corundum}, corundum consists of Al$^{3+}$ cations and O$^{2-}$ anions arranged in a slightly distorted octahedral coordination~\cite{ISOAnleitung}.
 
 \vspace{1em}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.78\textwidth]{../resources/figures/CorundumStructure.jpg}
-    \caption{The distorted-octahedral oxygen-ligand environment around an Al$^{3+}$ ion in corundum Al$_2$O$_3$ is shown in two ways, (A) and (B), and compared with a regular octahedron (C) \cite{webexhibits_causes_of_color}.}
+    \caption{The distorted-octahedral oxygen-ligand environment around an Al$^{3+}$ ion in corundum Al$_2$O$_3$ is shown in two ways, (A) and (B), and compared with a regular octahedron (C)~\cite{webexhibits_causes_of_color}.}
     \label{fig:corundum}
 \end{figure}
 
@@ -152,7 +152,7 @@ Pure corundum therefore does not absorb visible wavelengths and appears colorles
     \centering
     \includegraphics[width=0.85\textwidth]{../resources/figures/BandTheory.png}
     \caption{Comparison of the electronic band structures of a conductor (metal), a semiconductor, and an insulator.
-    The large band gap in the insulator case explains why pure Al$_2$O$_3$ does not absorb visible light \cite{wikipedia_bandtheory}.}
+    The large band gap in the insulator case explains why pure Al$_2$O$_3$ does not absorb visible light~\cite{wikipedia_bandtheory}.}
     \label{fig:bandtheory}
 \end{figure}
 
@@ -191,7 +191,7 @@ Orbitals that point between the ligands ($d_{xy}$, $d_{xz}$, $d_{yz}$) experienc
     \centering
     \includegraphics[width=1.0\textwidth]{../resources/figures/dOrbitals.png}
     \caption{Shapes of the five $d$-orbitals relative to the coordinate axes and the ligand directions in an octahedral environment.
-    Orbitals that point along the axes experience stronger repulsion than those pointing between the axes \cite{libretexts_d_orbitals}.}
+    Orbitals that point along the axes experience stronger repulsion than those pointing between the axes~\cite{libretexts_d_orbitals}.}
     \label{fig:d_orbitals}
 \end{figure}
 
@@ -240,7 +240,7 @@ This is why ruby appears red in both transmission and reflected light.
     \centering
     \includegraphics[width=0.82\textwidth]{../resources/figures/TanabeSugano.png}
     \caption{Tanabe-Sugano diagram for a $d^{3}$ ion showing the dependence of the electronic term energies on the crystal-field strength $Dq/B$.
-    At $Dq/B = 0$ the free-ion ground term ${}^{4}F$ appears as a single level, which splits into three states: the orange ${}^{4}A_{2}$ ground state, the blue ${}^{4}T_{2}$ state, and the green ${}^{4}T_{1}$ state \cite{wikipedia_tanabe_sugano_d3}.}
+    At $Dq/B = 0$ the free-ion ground term ${}^{4}F$ appears as a single level, which splits into three states: the orange ${}^{4}A_{2}$ ground state, the blue ${}^{4}T_{2}$ state, and the green ${}^{4}T_{1}$ state~\cite{wikipedia_tanabe_sugano_d3}.}
     \label{fig:tanabe_sugano}
 \end{figure}
 
@@ -302,13 +302,6 @@ Because both beams originate from the same light source, any fluctuations of the
 By comparing the two signals, these fluctuations are  suppressed and the true absorption of the sample is isolated.
 A schematic of the setup is shown in Figure~\ref{fig:spectrometer}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../resources/figures/spectrometer.png}
-    \caption{Schematic of the two-beam absorption spectrometer used to record the transmission spectrum of the ruby crystal.}
-    \label{fig:spectrometer}
-\end{figure}
-
 
 \subsection{Optical Layout and Beam Paths}
 
@@ -330,6 +323,13 @@ The monochromator (M) selects only a narrow wavelength band at a time.
 Its diffraction grating is driven by a motor that scans continuously through a chosen wavelength interval within the visible spectrum.
 The wavelength-selected beam finally reaches the photomultiplier tube (PM), whose signal is used for the measurement.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../resources/figures/spectrometer.png}
+    \caption{Schematic of the two-beam absorption spectrometer used to record the transmission spectrum of the ruby crystal~\cite{ISOAnleitung}.}
+    \label{fig:spectrometer}
+\end{figure}
+
 
 \subsection{Chopper and Lock-In Detection}
 
@@ -339,22 +339,23 @@ This means the detector receives an alternating sequence:
 \[
 \text{probe} \rightarrow \text{reference} \rightarrow \text{probe} \rightarrow \text{reference} \rightarrow \cdots
 \]
+The electrical signal from the photomultiplier is then sent to two places.
+One branch goes directly to the oscilloscope (Oszi), where the alternating probe–reference pattern can be monitored during alignment and calibration.
+The other branch goes into the A/D converter, where the signal is digitized and passed on to the lock-in amplifier.
 
-This alternating signal is fed to the lock-in amplifier.
-The chopper controller provides a reference signal at the same modulation frequency, so that the lock-in is synced precisely with the opening and closing of the two beam paths.
+The chopper controller provides a reference signal at the same modulation frequency, so the lock-in is synced precisely to the opening and closing of the two beam paths.
 Using this timing information, the lock-in assigns a positive sign to the probe contribution and a negative sign to the reference contribution.
 By averaging over many modulation cycles, the lock-in amplifier outputs a voltage proportional to the intensity difference
 \[
 I_{\mathrm{Probe}} - I_{\mathrm{Reference}}.
 \]
-
 This technique is highly effective at removing noise.
 Slow drifts of the lamp, ambient light, or electrical disturbances affect both beams equally and are therefore canceled out.
 What remains is the small difference caused by the ruby absorbing certain wavelengths of the probe beam.
 
 \subsection{Data Acquisition}
 
-The output of the lock-in amplifier is digitized by an A/D converter and recorded on a computer as the monochromator scans the selected wavelength range.
+The output of the lock-in amplifier is recorded by the computer as the monochromator scans the selected wavelength interval.
 The resulting dataset contains the wavelength-dependent difference signal, from which the transmission spectrum of the ruby sample is obtained.
 This spectrum includes both the broad U and Y absorption bands and the much weaker spin-forbidden transitions in the deep red region.
 
@@ -362,14 +363,70 @@ This spectrum includes both the broad U and Y absorption bands and the much weak
 
 % --- Procedure ---
 \section{Procedure}
-\subsection{xxx}
 
-xxx
+The measurements followed the sequence of tasks described in the experiment manual.
+All measurements were carried out by manually starting and stopping both the monochromator motor and the LabVIEW data acquisition software at the same time.
+This introduces a small reaction-time offset at the beginning and end of each scan.
+For each scan the initial value (\textit{Startwert}) in nanometers, the gear factor (\textit{Getriebefaktor}), and the scan direction (\textit{Getrieberichtung}) were entered into the LabVIEW interface~\cite{ISO_Datenaufnahme}.
 
+At the beginning of each data file these three values are stored as metadata, followed by two columns containing the time in seconds and the lock-in output voltage in volts.
+The LabVIEW front panel labels this quantity as ``Amplitude [mV]'' or equivalently as ``Intensität'', but the numerical values saved in the data files are written in SI units (volts).
 
-\subsection{xxx}
+\subsection{Initial Alignment of the Spectrometer}
 
-xxx
+Before the main measurements were recorded the two beams were aligned so that both of them were centered on the entrance slit of the monochromator.
+The wavelength was then set to 700\,nm, where the ruby absorbs negligibly.
+At this wavelength the intensities of the probe and reference beams were balanced using the diaphragms IB1 and IB2, with IB3 kept fully open.
+The balancing was monitored on the oscilloscope, which displayed the lock-in output as an alternating two-level signal corresponding to probe and reference.
+If the two plateaus did not lie at the same vertical height the diaphragms were adjusted until both levels matched.
+This ensured that both arms delivered equal intensity to the detector before the actual spectra were recorded.
+
+\subsection{Difference Measurement of Probe and Reference Beams}
+
+The first full measurement recorded the difference between probe and reference signals.
+The wavelength was scanned from 350\,nm to 720\,nm using a lock-in sensitivity of 50\,mV.
+A gear factor of 3.6 was used, corresponding to a scan speed of 1\,nm/s.
+The scan direction was noted in the data file, where a value of $+1$ indicates a scan from short to long wavelengths and $-1$ indicates the reverse direction.
+This measurement provided the coarse difference spectrum of the sample against the reference beam.
+
+\subsection{Intensity Spectrum of the Xenon Lamp}
+
+To record the intensity distribution of the xenon lamp the probe beam was blocked using aluminum foil placed directly in its path.
+The chopper and lock-in amplifier remained in the same configuration as before.
+With only the reference beam reaching the detector a full 350–720\,nm scan was recorded at 50\,mV sensitivity and with the same gear factor of 3.6 (1\,nm/s).
+This produced the reference-beam-only intensity spectrum of the light source.
+
+\subsection{Intensity Spectrum of the Probe Beam}
+
+The intensity spectrum of the probe beam alone was obtained by blocking the reference arm in the same way as above.
+With the probe beam unblocked and the reference beam blocked, the system recorded a second single-beam spectrum over 350–720\,nm at 50\,mV sensitivity using the same gear factor of 3.6 (1\,nm/s).
+
+\subsection{High-Sensitivity Measurements of the Red Region}
+
+To observe the weak spin-forbidden transitions in the deep red region the sensitivity of the lock-in amplifier was increased to 5\,mV.
+In this case the gear factor was reduced to 2.16, corresponding to a slower scan speed of 0.6\,nm/s.
+The monochromator was scanned over the restricted range 670-720\,nm.
+Three measurements were recorded in this region.
+First the difference spectrum was recorded with both beams unblocked.
+Second a reference-beam-only spectrum was obtained by blocking the probe beam.
+Third a probe-beam-only spectrum was recorded by blocking the reference beam.
+
+\subsection{Baseline Measurement with Pinhole}
+
+To determine the baseline of the apparatus the ruby crystal was replaced by the pinhole aperture in the probe arm.
+At 700\,nm the intensities of the two beams were matched again by adjusting IB1, IB2 and IB3.
+A full baseline spectrum was recorded from 350–720\,nm at 50\,mV sensitivity using a gear factor of 3.6 (1\,nm/s).
+In addition, a high-sensitivity baseline was recorded over 670–720\,nm at 5\,mV with the slower gear factor of 2.16 (0.6\,nm/s), to verify that any tiny features in the red region originated from the ruby sample and not from the setup.
+
+\subsection{Wavelength Calibration Using a Mercury Lamp}
+
+For wavelength calibration a mercury low-pressure lamp was placed directly in front of the entrance slit of the monochromator.
+In this configuration the chopper and lock-in amplifier were switched off, since the calibration spectrum is recorded as a direct intensity signal.
+A scan over the full range 350–720\,nm was recorded using the standard coarse-scan gear factor of 3.6 (1\,nm/s).
+The sharp emission lines of mercury were later used to calibrate the wavelength scale of all other spectra.
+
+At the beginning of each data file the start wavelength, the gear factor, and the scan direction are stored as metadata, followed by two columns containing time (in seconds) and intensity (in volts) sampled directly from the lock-in output.
+The LabVIEW display labels this quantity as ``Amplitude [mV]'' or equivalently as ``Intensität'', but the numerical values saved in the data files are stored in SI units (volts).
 
 
 
