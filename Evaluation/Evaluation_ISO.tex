@@ -431,35 +431,58 @@ The sharp emission lines of mercury were later used to calibrate the wavelength 
 \section{Results}
 \subsection{Wavelength Calibration of the Monochromator}
 
-xxx
+To calibrate the wavelength scale of the monochromator we recorded the emission spectrum of a mercury low-pressure lamp and compared the measured peak positions to the known reference wavelengths.
+The recorded spectrum and the literature spectrum are shown in Figure~\ref{fig:hg_measured} and Figure~\ref{fig:hg_reference}.
+Because the monochromator scans mechanically and the motor does not have an absolute zero point, small wavelength offsets of a few nanometers are common and must be corrected.
 
+The measured mercury spectrum shows several sharp lines on top of a very low background.
+One extremely strong peak appears near 512\,nm.
+This does not correspond to any real mercury line in the visible range.
+It is a first-order diffraction peak of the ultraviolet 253.7\,nm line and is therefore ignored in the calibration.
+
+All other peaks in the recorded spectrum match the characteristic mercury lines and can be used for the calibration.
+By inspecting the plotted spectrum we first estimated the approximate positions of the visible peaks by eye.
+For each of these guesses we then searched the data in a small interval of $\pm 3$\,nm and selected the exact wavelength at which the measured intensity reached its maximum.
+
+The following reference wavelengths were used:
+\[
+\lambda_{\mathrm{ref}} = (365.0,\; 404.7,\; 435.8,\; 546.1,\; 577.0,\; 579.0)\,\mathrm{nm}.
+\]
+The corresponding measured peak positions were found to be:
+\[
+\lambda_{\mathrm{meas}} = (369.3,\; 409.0,\; 440.4,\; 550.8,\; 581.7,\; 583.8)\,\mathrm{nm}.
+\]
+
+For each line we formed the wavelength difference
+\[
+\Delta\lambda_i = \lambda_{\mathrm{ref},i} - \lambda_{\mathrm{meas},i}.
+\]
+All six values were close to one another, with a mean shift of
+\[
+\Delta\lambda = -4.57\,\mathrm{nm}.
+\]
+
+This constant offset was applied to all other spectra in the form
+\[
+\lambda_{\mathrm{corr}} = \lambda_{\mathrm{meas}} + \Delta\lambda.
+\]
+After this correction the mercury lines align well with the literature values and the wavelength scale of the monochromator is considered calibrated.
+
+\vspace{1em}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../resources/figures/HgSpectrum_recorded.png}
-    \caption{xxx}
-    \label{fig:HgRecorded}
+    \includegraphics[width=0.88\textwidth]{../resources/figures/HgSpectrum_measured.png}
+    \caption{Measured mercury spectrum used for wavelength calibration.
+    The very strong peak near 512\,nm is a first-order diffraction of the 253.7\,nm UV line and is not used in the calibration.}
+    \label{fig:hg_measured}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../resources/figures/HgSpectrum.png}
-    \caption{xxx}
-    \label{fig:Hg1}
+    \includegraphics[width=0.75\textwidth]{../resources/figures/HgSpectrum.png}
+    \caption{Reference emission spectrum of a mercury low-pressure lamp~\cite{ISOAnleitung}.}
+    \label{fig:hg_reference}
 \end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../resources/figures/HgSpectrum2.png}
-    \caption{xxx}
-    \label{fig:Hg2}
-\end{figure}
-
-
-
-% Task h)
-% - Use the Hg lamp spectrum to identify the known mercury emission lines.
-% - Compare measured peak positions with literature wavelengths and determine the calibration function (e.g., linear or affine correction).
-% - Apply this correction to all other spectra.
 
 \subsection{Ruby Transmission / Absorption Spectrum (350–720 nm)}
 % Task i)
