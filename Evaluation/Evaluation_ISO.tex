@@ -491,6 +491,43 @@ After this correction the mercury lines align well with the literature values an
 % - Decide on the most appropriate plotted physical quantity (transmission, absorbance, or difference intensity).
 % - Justify why this choice allows correct determination of the U and Y band energies.
 
+
+After calibration, and the correction of the wavelengths, the measured data is plotted. The data in figure \ref{fig:measuredspectra50} already allows for some conclusions. But there are also things that seem a bit strange at first.
+In the graph for the ruby transmission spectrum, it becomes clear that almost all wavelengths of the visible spectrum under around 430 nm are absorbed. The same is true for wavelengths in the 530 to 580 nm range. \\
+What also becomes clear from this data is that the xenon lamp does emit light over the whole visible spectrum, which is crucial to be able to determine the absorption spectrum of ruby.\\
+The baseline (black) that should ideally be zero, is far away from a straight line. This significantly influences the accuracy of the measurements. It is also likely that the fluctuations that can be seen in all measurements, in the 450 to 500 nm range stem from the baseline. \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../resources/figures/MeasuredSpectra.png}
+    \caption{Xenon Emission, Ruby Transmission, Difference Spectrum and Baseline 350-720 nm}
+    \label{fig:measuredspectra50}
+\end{figure}
+
+
+Initially one might think that it makes sense to substract the baseline, but because some wavelengths are completely absorbed by the ruby, the substraction of the baseline results in less accurate data, that becomes especially clear when the baseline is subtracted from the ruby transmission spectrum. There should not be negative intensities. \ref{fig:subbaseline}\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../resources/figures/DataWithBaselineCorrection.png}
+    \caption{Mesurement data with subtracted baseline; 350-720 nm}
+    \label{fig:subbaseline}
+\end{figure}
+
+The most intuitive way to get the absorption spectrum of the ruby is to substract the rubys transmission spectrum from the xenon emission spectrum. This is what the lockin amplifier was intended to do with the difference spectrum. But the calculated result looks a bit different, as can be seen in figure \ref{fig:rubyabsorbtion50}. However if the xenon emission spectrum is subtracted from the difference spectrum that has been recorded with the lock in amplifier, it look remarkably similar to the calculated difference spectrum. In this case the two expected absorbtion bands that are roughly in the 400-450 and 500-600 nm ranges, are also easily decernable.\\
+Absorbtion above the 650 nm mark does become negligible, there is also a dip in the absorbtion spectrum roughly between 450 and 500 nm. This results in the distinct red color of the ruby.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../resources/figures/RubyAbsorbtion.png}
+    \caption{Different calculations for the ruby absorbtion spectrum, 350-720 nm}
+    \label{fig:rubyabsorbtion50}
+\end{figure}
+
+
+
+
+
 \subsection{Determination of Band Centers of the U and Y Absorption Bands}
 % Task j)
 % - Extract the broad U and Y bands from the absorption curve.
