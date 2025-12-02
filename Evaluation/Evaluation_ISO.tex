@@ -525,14 +525,45 @@ Absorbtion above the 650 nm mark does become negligible, there is also a dip in 
 \end{figure}
 
 
-
-
-
 \subsection{Determination of Band Centers of the U and Y Absorption Bands}
 % Task j)
 % - Extract the broad U and Y bands from the absorption curve.
 % - Determine the "band center" (Schwerpunkt / centroid) of each band, not the maximum.
 % - Explain briefly how the centroid is calculated (numerical integral over wavelength or wavenumber).
+To determine the bandcenters of the U and the Y absorption bands, the Beer-Lambert law \cite{wikipedia_beer_lambert_law} is used to have the absoptivity A as a function of the wavelength:
+
+\[
+    A = log_{10}\big(\frac{I_0(\lambda)}{I(\lambda)}\big)
+\]
+Where $I_0$ is the intensity of the incoming light, in this case of the xenon lamp, and I is the intensity of the ruby transmission. From this we get the following graph:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../resources/figures/BeerLambert.png}
+    \caption{Absorptivity A as a function of  $\lambda$ (Beer-Lambert law)}
+    \label{fig:beerlambert}
+\end{figure}
+
+Now the band centers are determined with the equation for the center of mass. 
+
+\[
+    \lambda_{COM} = \frac{\sum \lambda_i \cdot A_i }{\sum A_i}
+\]
+
+This was done for both peaks visible in figure \ref{fig:beerlambert}, with $\lambda_i$ between 360 and 470 nm for the first peak, and between 470 and 650 for the second peak. This was done because there are two peaks that need to be seperated.
+
+From this the bandcenters and the FWHM for the U and Y bands can be determined.
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+            & left FWHM & Bandcenter & right FWHM  \\ 
+    Y-band: &    377 nm &     409 nm &     434 nm  \\
+    U-band: &    514 nm &     550 nm &     591 nm  \\
+    \end{tabular}
+\end{table}
+
 
 \subsection{Determination of the Crystal-Field Parameter Dq}
 % Task k)
