@@ -268,9 +268,10 @@ Because both axes are dimensionless, measured transition energies can be placed 
 In ruby the ground state is ${}^{4}A_{2}$, and the two broad absorption bands in the visible range arise from excitations into the ${}^{4}T_{2}$ and ${}^{4}T_{1}$ states.
 These are the Y band (${}^{4}A_{2}\rightarrow{}^{4}T_{2}$) and the U band (${}^{4}A_{2}\rightarrow{}^{4}T_{1}$).
 To compare the measured wavelengths with the diagram, the photon energies are obtained from
-\[
-E = \frac{hc}{\lambda},
-\]
+\begin{equation}
+    E = \frac{hc}{\lambda}
+    \label{eq:photon_energy}
+\end{equation}
 or, in spectroscopic units,
 \[
 \tilde{\nu} = \frac{1}{\lambda}.
@@ -284,9 +285,11 @@ Using the Racah parameter $B = 765\,\mathrm{cm^{-1}}$, the crystal-field paramet
 Dq = B\cdot(Dq/B).
 \]
 After $Dq$ has been determined, it is sometimes convenient to express the strength of the octahedral field through the quantity
-\[
-\Delta = 10Dq.
-\]
+\begin{equation}
+    \Delta = 10Dq
+    \label{eq:delta_definition}
+\end{equation}
+
 This relation comes from the simple one-electron picture, in which the five $d$-orbitals split into a lower $t_{2g}$ group and a higher $e_{g}$ group separated by $10Dq$.
 For a multi-electron ion such as Cr$^{3+}$ the actual optical transitions involve many-electron states, so they do not occur exactly at $10Dq$, but the parameter $\Delta$ remains a traditional way of expressing the overall size of the crystal-field splitting.
 
@@ -549,7 +552,7 @@ The absolute absorption intensity ($I_{Abs}$) was then calculated as:
 \begin{equation}
     I_{Abs}(\lambda) = I_{Xe}(\lambda) - I_{Ru}(\lambda)
 \end{equation}
-This quantity was chosen for the final analysis because it is robust against the beam-balance errors introduced by the lens adjustment. Furthermore, plotting the absorption intensity yields positive peaks for the absorption bands, allowing for a precise determination of the band centers required for the crystal-field analysis (Task j).
+This quantity was chosen for the final analysis because it is robust against the beam-balance errors introduced by the lens adjustment. Furthermore, plotting the absorption intensity yields positive peaks for the absorption bands, allowing for a precise determination of the band centers required for the crystal-field analysis.
 
 \subsubsection*{Resulting Spectrum}
 The corrected absorption spectrum is shown in Figure \ref{fig:ruby_corrected}. The spectrum clearly displays two broad absorption features:
@@ -609,6 +612,45 @@ The calculated band centers and the wavelengths at half-maximum (HM) are summari
 % - Place both values on the Tanabe–Sugano diagram for d^3.
 % - Read off the corresponding Dq/B values from the intersections with the 4T2 and 4T1 curves.
 % - Compute Dq using B = 765 cm^{-1} and average the two results.
+To determine the crystal-field splitting parameter $Dq$, we utilize the band center energies previously determined and apply the methodology discussed in the theory section.
+
+First, the band center wavelengths were converted into spectroscopic wavenumbers $\tilde{\nu}$ using the photon energy relation (Equation~\ref{eq:photon_energy}):
+
+\begin{itemize}
+    \item \textbf{Y-Band} (${}^4A_2 \rightarrow {}^4T_2$): $\lambda_Y = 550 \text{ nm} \implies \tilde{\nu}_Y \approx 18182 \text{ cm}^{-1}$
+    \item \textbf{U-Band} (${}^4A_2 \rightarrow {}^4T_1$): $\lambda_U = 409 \text{ nm} \implies \tilde{\nu}_U \approx 24450 \text{ cm}^{-1}$
+\end{itemize}
+
+
+
+Using the Racah parameter $B = 765 \text{ cm}^{-1}$ provided in the manual~\cite{ISOAnleitung}, we calculated the dimensionless energy ratios $E/B$ to locate the transitions on the vertical axis of the Tanabe-Sugano diagram (Figure \ref{fig:tanabe_sugano}):
+\begin{align*}
+    (E/B)_Y &= \frac{18182}{765} \approx 23.77 \\
+    (E/B)_U &= \frac{24450}{765} \approx 31.96
+\end{align*}
+
+As discussed in Section 2.4, the energy of the first spin-allowed transition (${}^4A_2 \rightarrow {}^4T_2$) in a $d^3$ system corresponds directly to the crystal-field splitting energy $\Delta$. Using the theoretical relation $\Delta = 10Dq$ (Equation~\ref{eq:delta_definition}), the parameter $Dq$ is derived directly from the Y-band energy:
+
+\begin{equation}
+    10 Dq = 18182 \text{ cm}^{-1} \implies Dq \approx 1818 \text{ cm}^{-1}
+\end{equation}
+
+To verify this result, we compared the calculated ratio $Dq/B \approx 2.38$ against the Tanabe-Sugano diagram for a $d^3$ ion (Figure \ref{fig:tanabe_sugano}).
+
+
+
+At the abscissa value $Dq/B = 2.38$:
+\begin{itemize}
+    \item The lowest excited state curve (${}^4T_2$) intersects at $E/B = 10 \times 2.38 = 23.8$, which is in perfect agreement with our measured value of $(E/B)_Y = 23.77$.
+    \item The second excited state curve (${}^4T_1$) is expected at $E/B \approx 32$. Our measured value of $(E/B)_U = 31.96$ aligns closely with this prediction, confirming the validity of the assignment.
+\end{itemize}
+
+\textbf{Result:}
+The crystal-field splitting parameter is determined to be:
+\begin{equation}
+    Dq = 1818 \pm 20 \text{ cm}^{-1}
+\end{equation}
+This yields a total crystal-field splitting energy of $\Delta = 10Dq = 18182 \text{ cm}^{-1}$.
 
 \subsection{High-Sensitivity Measurement of Forbidden Transitions}
 % Task l)
