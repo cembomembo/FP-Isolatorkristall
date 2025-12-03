@@ -252,10 +252,14 @@ Transitions that change the total spin are often called ``forbidden'', because t
 However, real crystals are never perfectly symmetric, so small distortions and lattice vibrations mix the electronic states slightly and these transitions become weakly allowed.
 As a result they appear as tiny absorption features in the red part of the spectrum.
 
-The doublet state ${}^{2}E$ also plays an important role because electrons that are first excited into ${}^{4}T_{2}$ can relax non-radiatively into this level.
-From there they can return to the ground state ${}^{4}A_{2}$ by emitting red light.
-This radiative decay produces two very sharp emission lines around 694\,nm, often referred to as the R-lines.
-They do not show up as absorption dips in this experiment, but they belong to the same group of spin-forbidden transitions and one of them forms the basis of the well-known ruby laser~\cite{kitzmann_molecular_ruby_2022,wikipedia_ruby_pressure_scale}.
+The most important of these doublet levels is the ${}^{2}E$ state.
+Electrons first excited into the ${}^{4}T_{2}$ band can relax non-radiatively into this level.
+From there, they return to the ground state ${}^{4}A_{2}$ by emitting red light.
+This produces two sharp emission lines around 694\,nm known as the R-lines. One of these lines forms the basis of the well-known ruby laser~\cite{kitzmann_molecular_ruby_2022,wikipedia_ruby_pressure_scale}.
+
+It is important to note that the weak spin-forbidden absorption features around these wavelengths correspond to the *reverse* of the R-line emissions.
+In absorption, the crystal undergoes the transition ${}^{4}A_{2} \rightarrow {}^{2}E$, whereas in emission the process runs in the opposite direction.
+Thus, the narrow red absorption lines are the absorption counterparts of the R-lines themselves, appearing weakly because they are spin-forbidden.
 
 
 \subsection{Determining the Crystal-Field Parameter \texorpdfstring{$Dq$}{}}
@@ -263,7 +267,7 @@ They do not show up as absorption dips in this experiment, but they belong to th
 The Tanabe–Sugano diagram for a $d^{3}$ ion, shown in Fig.~\ref{fig:tanabe_sugano}, plots the energies of the electronic states as a function of the crystal-field strength.
 In this diagram the term energies are expressed in spectroscopic units of $\mathrm{cm^{-1}}$, and the Racah parameter $B$ has the same units, so the vertical axis plots the dimensionless ratio $E/B$.
 The crystal-field strength $Dq$ is likewise an energy expressed in $\mathrm{cm^{-1}}$, which is why the horizontal axis shows the dimensionless ratio $Dq/B$.
-Because both axes are dimensionless, measured transition energies can be placed on the diagram without any further scaling.
+Energies can therefore be placed on the diagram without any further scaling.
 
 In ruby the ground state is ${}^{4}A_{2}$, and the two broad absorption bands in the visible range arise from excitations into the ${}^{4}T_{2}$ and ${}^{4}T_{1}$ states.
 These are the Y band (${}^{4}A_{2}\rightarrow{}^{4}T_{2}$) and the U band (${}^{4}A_{2}\rightarrow{}^{4}T_{1}$).
@@ -289,7 +293,6 @@ After $Dq$ has been determined, it is sometimes convenient to express the streng
     \Delta = 10Dq
     \label{eq:delta_definition}
 \end{equation}
-
 This relation comes from the simple one-electron picture, in which the five $d$-orbitals split into a lower $t_{2g}$ group and a higher $e_{g}$ group separated by $10Dq$.
 For a multi-electron ion such as Cr$^{3+}$ the actual optical transitions involve many-electron states, so they do not occur exactly at $10Dq$, but the parameter $\Delta$ remains a traditional way of expressing the overall size of the crystal-field splitting.
 
