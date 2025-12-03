@@ -645,32 +645,29 @@ At the abscissa value $Dq/B = 2.38$:
     \item The second excited state curve (${}^4T_1$) is expected at $E/B \approx 32$. Our measured value of $(E/B)_U = 31.96$ aligns closely with this prediction, confirming the validity of the assignment.
 \end{itemize}
 
-\textbf{Result:}
-The crystal-field splitting parameter is determined to be:
-\begin{equation}
-    Dq = 1818 \pm 20 \text{ cm}^{-1}
-\end{equation}
-This yields a total crystal-field splitting energy of $\Delta = 10Dq = 18182 \text{ cm}^{-1}$.
+Therefore, the crystal field splitting parameter is determined to be
+$Dq = 1818 \pm 20 \text{ cm}^{-1}$. This yields a total crystal field splitting energy of $\Delta = 10Dq = 18182 \text{ cm}^{-1}$.
 
 \subsection{High-Sensitivity Measurement of Forbidden Transitions}
 % Task l)
 % - Analyze the 670–720 nm high-sensitivity spectra.
 % - Identify the very weak spin-forbidden transitions or confirm their absence.
 % - Explain what physical process is being measured and why high sensitivity is required.
+The red spectral region (670--720 nm) was scanned with increased sensitivity (5 mV lock-in range) and a slower scan speed. The goal was to detect the weak absorption features corresponding to the "forbidden" transitions into the ${}^2E$ state.
+While the broad U and Y bands arise from spin-allowed transitions ($\Delta S = 0$) between quartet states, the features in the red region correspond to transitions from the quartet ground state ${}^4A_2$ ($S=3/2$) to the doublet state ${}^2E$ ($S=1/2$).
+According to the selection rules for electric dipole transitions, processes that change the total spin multiplicity are forbidden ($\Delta S \neq 0$). However, due to spin-orbit coupling and distortions in the crystal lattice, the spin states mix slightly, making these transitions weakly allowed.
 
+\subsubsection*{Observation of R-Lines}
+The resulting high-sensitivity absorption spectrum is shown in Figure \ref{fig:rlines}.
+
+Unlike the broad bands, these transitions appear as sharp peaks because the ${}^2E$ state is not as strongly affected by the crystal field vibrations (the potential energy curves are parallel to the ground state in the Tanabe-Sugano diagram).
+The primary feature expected is the characteristic \textbf{R-line} doublet around 694 nm.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{../resources/figures/MeasuredSpectraHighSens.png}
-    \caption{Mesured spectra; 670-720 nm}
-    \label{fig:MeasuredSpectraHighSens}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{../resources/figures/DifferenceHighSens.png}
-    \caption{Difference spectrum for high sensitivity measurement; 670-720 nm}
-    \label{fig:MeasuredSpectraHighSens}
+    \includegraphics[width=0.9\textwidth]{../resources/figures/RLines_Spectrum.png}
+    \caption{High-sensitivity absorption spectrum in the red region. The weak features around 694 nm correspond to the spin-forbidden ${}^4A_2 \rightarrow {}^2E$ transitions (R-lines).}
+    \label{fig:rlines}
 \end{figure}
 
 % --- Discussion ---
