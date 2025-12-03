@@ -524,44 +524,82 @@ Absorbtion above the 650 nm mark does become negligible, there is also a dip in 
     \label{fig:rubyabsorbtion50}
 \end{figure}
 
+\subsection{Ruby Transmission / Absorption Spectrum (350-720 nm) Javi Version}
 
-\subsection{Determination of Band Centers of the U and Y Absorption Bands}
-% Task j)
-% - Extract the broad U and Y bands from the absorption curve.
-% - Determine the "band center" (Schwerpunkt / centroid) of each band, not the maximum.
-% - Explain briefly how the centroid is calculated (numerical integral over wavelength or wavenumber).
-To determine the bandcenters of the U and the Y absorption bands, the Beer-Lambert law \cite{wikipedia_beer_lambert_law} is used to have the absoptivity A as a function of the wavelength:
+Following the wavelength calibration, the transmission and absorption properties of the ruby crystal were analyzed. The measurements yielded the intensity spectrum of the Xenon source ($I_{Xe}$) and the transmission spectrum of the ruby sample ($I_{Ru}$).
 
-\[
-    A = log_{10}\big(\frac{I_0(\lambda)}{I(\lambda)}\big)
-\]
-Where $I_0$ is the intensity of the incoming light, in this case of the xenon lamp, and I is the intensity of the ruby transmission. From this we get the following graph:
+\subsubsection*{Evaluation of Measurement Methodology}
+Ideally, the absorption spectrum is obtained by recording the difference signal ($I_{Probe} - I_{Ref}$) using the lock-in amplifier and subtracting a baseline measurement ($I_{Base}$). However, an analysis of our data revealed a significant systematic error in this standard procedure.
+
+As noted in the experimental log, the optical setup (lens positions and iris diaphragms) was adjusted between the measurement of the ruby spectrum and the recording of the baseline. This realignment fundamentally altered the intensity balance between the probe and reference beams. Consequently, the recorded baseline (Figure \ref{fig:measuredspectra50}, black line) does not correctly represent the background of the ruby measurement. Attempting to subtract this baseline results in unphysical artifacts, such as negative intensities in regions where the crystal should be absorbing.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{../resources/figures/BeerLambert.png}
-    \caption{Absorptivity A as a function of  $\lambda$ (Beer-Lambert law)}
+    \includegraphics[width=0.9\textwidth]{../resources/figures/MeasuredSpectra.png}
+    \caption{Raw intensity spectra of the Xenon lamp (Reference beam, inverted) and the Ruby transmission (Probe beam). The baseline (black) shows significant deviation from zero due to the optical realignment.}
+    % \label{fig:measuredspectra50}
+\end{figure}
+
+\subsubsection*{Construction of the Absorption Spectrum}
+To circumvent the baseline error, we constructed the absorption spectrum by directly comparing the single-beam intensities of the source and the sample. 
+
+The Xenon emission spectrum was recorded by blocking the probe beam, resulting in a signal proportional to $-I_{Ref}$ (as the lock-in measures $I_{Probe} - I_{Ref}$). We inverted this signal to obtain the positive source intensity $I_{Xe}$. The ruby transmission $I_{Ru}$ was recorded by blocking the reference beam.
+
+The absolute absorption intensity ($I_{Abs}$) was then calculated as:
+\begin{equation}
+    I_{Abs}(\lambda) = I_{Xe}(\lambda) - I_{Ru}(\lambda)
+\end{equation}
+This quantity was chosen for the final analysis because it is robust against the beam-balance errors introduced by the lens adjustment. Furthermore, plotting the absorption intensity yields positive peaks for the absorption bands, allowing for a precise determination of the band centers required for the crystal-field analysis (Task j).
+
+\subsubsection*{Resulting Spectrum}
+The corrected absorption spectrum is shown in Figure \ref{fig:ruby_corrected}. The spectrum clearly displays two broad absorption features:
+\begin{itemize}
+    \item The \textbf{U-Band} in the violet/blue region (approx. 400--450 nm).
+    \item The \textbf{Y-Band} in the green/yellow region (approx. 500--600 nm).
+\end{itemize}
+In the red region ($>650$ nm), the absorption drops to near zero, consistent with the characteristic red color of the ruby crystal.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../resources/figures/RubyAbsorption_Corrected.png}
+    \caption{Calculated absorption spectrum of the ruby crystal ($I_{Xe} - I_{Ru}$). The broad U and Y absorption bands are clearly visible as positive peaks, while the red region shows high transmission.}
+    \label{fig:ruby_corrected}
+\end{figure}
+
+
+\subsection{Determination of Band Centers of the U and Y Absorption Bands}
+
+To precisely determine the band centers (centroids), we utilized the Beer-Lambert law \cite{wikipedia_beer_lambert_law} to calculate the absorbance (or optical density) $A$ as a function of wavelength. 
+
+Since the raw reference signal ($I_{Ref}$) was recorded as negative voltage by the lock-in amplifier (see Section 5.2), we used its absolute value $|I_{Ref}|$ as the incident intensity $I_0$. The transmission intensity $I$ corresponds to the ruby measurement.
+\[
+    A(\lambda) = \log_{10}\left(\frac{|I_0(\lambda)|}{I(\lambda)}\right)
+\]
+From this absorbance spectrum, the centroids ($\lambda_{COM}$) of the bands were calculated using the center-of-mass equation, effectively weighting the wavelength by the optical density:
+\[
+    \lambda_{COM} = \frac{\sum_{\lambda_{start}}^{\lambda_{end}} \lambda_i \cdot A_i }{\sum_{\lambda_{start}}^{\lambda_{end}} A_i}
+\]
+The integration intervals were chosen to isolate each band: 360--470 nm for the U-band and 470--650 nm for the Y-band.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../resources/figures/BeerLambert.png}
+    \caption{Absorbance $A$ of the ruby crystal calculated via the Beer-Lambert law. The centroids were determined by numerical integration over the respective peaks.}
     \label{fig:beerlambert}
 \end{figure}
 
-Now the band centers are determined with the equation for the center of mass. 
-
-\[
-    \lambda_{COM} = \frac{\sum \lambda_i \cdot A_i }{\sum A_i}
-\]
-
-This was done for both peaks visible in figure \ref{fig:beerlambert}, with $\lambda_i$ between 360 and 470 nm for the first peak, and between 470 and 650 for the second peak. This was done because there are two peaks that need to be seperated.
-
-From this the bandcenters and the FWHM for the U and Y bands can be determined.
-
+The calculated band centers and the wavelengths at half-maximum (HM) are summarized in Table \ref{tab:bandcenters}. Note that the \textbf{U-band} corresponds to the higher-energy (shorter wavelength) transition, while the \textbf{Y-band} corresponds to the lower-energy (longer wavelength) transition.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{cccc}
-            & left FWHM & Bandcenter & right FWHM  \\ 
-    Y-band: &    377 nm &     409 nm &     434 nm  \\
-    U-band: &    514 nm &     550 nm &     591 nm  \\
+    \begin{tabular}{c|ccc}
+    \hline
+    \textbf{Band} & \textbf{$\lambda_{HM, left}$ (nm)} & \textbf{Centroid $\lambda_{COM}$ (nm)} & \textbf{$\lambda_{HM, right}$ (nm)} \\ \hline
+    \textbf{U-Band} (${}^4T_1$) & 377 & \textbf{409} & 434 \\
+    \textbf{Y-Band} (${}^4T_2$) & 514 & \textbf{550} & 591 \\ \hline
     \end{tabular}
+    \caption{Determined centroids and half-maximum positions for the U and Y absorption bands.}
+    \label{tab:bandcenters}
 \end{table}
 
 
